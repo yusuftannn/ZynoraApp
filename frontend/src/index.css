@@ -88,6 +88,10 @@
   .max_padd_container {
     @apply mx-auto max-w-[1440px] px-6 lg:px-20;
   }
+  .max_padd_container-lg{
+    @apply mx-auto max-w-[1920px] px-6 lg:px-20;
+
+  }
 
   .flexCenter {
     @apply flex items-center justify-center;
