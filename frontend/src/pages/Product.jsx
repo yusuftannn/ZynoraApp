@@ -1,8 +1,10 @@
 import { useContext } from 'react'
 import {ShopContext} from "../Context/ShopContext"
 import { useParams } from 'react-router-dom' 
-import ProductHd from '../components/ProductHd'
+import ProductBreadCrumb from '../components/ProductBreadCrumb'
 import ProductDisplay from '../components/ProductDisplay'
+import ProductDescription from '../components/ProductDescription'
+import RelatedProducts from '../components/RelatedProducts'
 
 const Product = () => {
   const {all_products} = useContext(ShopContext)
@@ -15,8 +17,10 @@ const Product = () => {
   return (
     <section className='max_padd_container py-28'>
       <div>
-        <ProductHd product={product}/>
+        <ProductBreadCrumb product={product}/>
         <ProductDisplay product={product}/>
+        <ProductDescription/>
+        <RelatedProducts/>
       </div>
     </section>
   )
